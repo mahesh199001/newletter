@@ -35,3 +35,15 @@ The GitHub Pages version works locally without a backend, but browser storage is
 5. Commit and push the changed file to GitHub.
 
 Never put a Supabase `service_role` key in this website. Only the public `anon` key belongs in `supabase-config.js`.
+
+## Pooja Supabase setup
+
+This project intentionally uses separate database names and functions so it does not change Roshni's website:
+
+- `pooja_shayari_state`
+- `pooja_shayaris`
+- `get_pooja_current_shayari`
+- `create_pooja_manual_shayari`
+- `record_pooja_page_open`
+
+Run `supabase/schema.sql` in the same Supabase project before opening the site. The existing public URL and publishable key can be reused because the database objects are isolated with the `pooja_` prefix.
