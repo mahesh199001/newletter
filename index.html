@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="gu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>મારી પૂજા - પ્રેમ પત્ર</title>
+    <meta
+      name="description"
+      content="Romantic Gujarati love page for Pooja with live India date, time, daily shayari, and playful love notes."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Gujarati:wght@400;500;600;700&family=Noto+Serif+Gujarati:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=release-global-counter" />
+  </head>
+  <body data-theme="night">
+    <div class="sky-particles"></div>
+    <div class="sun-glow glow-one"></div>
+    <div class="sun-glow glow-two"></div>
+    <div class="floating-heart heart-1">❤</div>
+    <div class="floating-heart heart-2">❤</div>
+    <div class="floating-heart heart-3">❤</div>
+
+    <main class="page-shell">
+      <section class="love-card">
+        <div class="top-bar">
+          <div class="top-badge">💌 પૂજા માટેનો દૈનિક પ્રેમ પત્ર</div>
+        </div>
+
+        <h1>પૂજા માટેનો મારો દૈનિક પ્રેમ પત્ર</h1>
+        <p class="subtitle">
+          તારા માટે લખાયેલો એવો પત્ર, જે દરેક દિવસના સમય સાથે નવી લાગણી, નવી શાયરી અને નવી યાદ લઈને આવે છે ✨
+        </p>
+
+        <div class="live-timer">
+          <strong id="dateDisplay">--</strong>
+          <span class="divider">•</span>
+          <strong id="dayDisplay">--</strong>
+          <span class="divider">•</span>
+          <strong id="timeDisplay">--:-- am</strong>
+        </div>
+
+        <div class="mood-strip">
+          <span id="timeMood">સવારની નમ્રતા ☀️</span>
+        </div>
+
+        <div class="shayari-panel">
+          <p class="mini-title" id="letterGreeting">પ્રિય પૂજા, શુભ રાત્રી 💞</p>
+          <blockquote id="shayariText" aria-live="polite">શાયરી તૈયાર થઈ રહી છે...</blockquote>
+          <p id="funnyLine" class="funny-line">તારી સાથે હસવું એ મારા દિવસની સૌથી મીઠી પળ છે 😄</p>
+        </div>
+
+        <div class="reason-box">
+          <p class="reason-title">આ શાયરી સાથેનું મારું કારણ 🌷</p>
+          <p id="loveReason">પૂજા માટે એક ખાસ સંદેશ તૈયાર થઈ રહ્યો છે.</p>
+        </div>
+
+        <div class="button-row">
+          <button type="button" id="refreshButton" class="primary-btn">બીજી શાયરી વાંચો ✨</button>
+          <button type="button" id="revealButton" class="secondary-btn">સંકેત ખોલો 💌</button>
+        </div>
+
+        <div class="shayari-meta" aria-live="polite">
+          <span>છેલ્લી શાયરી <strong id="lastShayariCreated">--</strong></span>
+          <span>આગામી શાયરી <strong id="nextShayariCreated">--</strong></span>
+        </div>
+
+        <div id="secretMessage" class="secret-message hidden">
+          પૂજા, તારા હાસ્યથી મારી દુનિયા વધુ હળવી બની ગઈ છે. તારો સાથ મારી સૌથી સુંદર ટેવ છે, તારું સ્મિત મારી શાંતિ છે અને તારી યાદ મારી રાતનું સૌથી સુંદર નક્ષત્ર છે. હું તને હંમેશા પ્રેમ કરું છું અને દરેક નવા દિવસમાં તારી ખુશી માટે પ્રાર્થના કરું છું 💖
+        </div>
+
+        <div class="stats-panel">
+          <div class="stat-item">
+            <span>બનાવેલી શાયરીની સંખ્યા</span>
+            <strong id="shayariCount">0</strong>
+          </div>
+          <div class="stat-item">
+            <span>પેજ ઓપન રેકોર્ડ</span>
+            <strong id="visitCount">0</strong>
+          </div>
+          <div class="stat-item">
+            <span>છેલ્લી મુલાકાત</span>
+            <strong id="lastVisit">--</strong>
+          </div>
+        </div>
+
+        <div class="log-box">
+          <p class="log-title">પ્રેમનો લોગ 📋</p>
+          <ul id="visitLogs"></ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="supabase-config.js?v=release-global-counter"></script>
+    <script src="script.js?v=release-global-counter"></script>
+  </body>
+</html>
