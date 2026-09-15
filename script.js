@@ -135,14 +135,14 @@ const hasSupabase = Boolean(supabaseConfig.url && supabaseConfig.anonKey);
 
 const themeOptions = {
   morning: [
-    ['#fff1d6', '#ffd0b8', '#8ecbff', '#432b35', '#ed719d'],
+    ['#fff1d6', '#ffd0b8', '#8ecbff', '#432b35', '#9a3f58'],
     ['#f6f7df', '#c9e7d0', '#91c4de', '#263d3b', '#4f9b89'],
-    ['#fff8e9', '#f2d3a0', '#d6a6a6', '#4a3030', '#c66f74']
+    ['#fff8e9', '#f2d3a0', '#d6a6a6', '#4a3030', '#9a4658']
   ],
   afternoon: [
-    ['#ffe0a8', '#ffb6a3', '#7cc9ef', '#48232b', '#e86d7d'],
+    ['#ffe0a8', '#ffb6a3', '#7cc9ef', '#48232b', '#9a3d51'],
     ['#d8f0e7', '#a7d8ef', '#f5c58a', '#24434b', '#3e9b98'],
-    ['#f5e2c8', '#d8c1ec', '#9db7de', '#33284a', '#8067c4']
+    ['#f5e2c8', '#d8c1ec', '#9db7de', '#33284a', '#60458f']
   ],
   evening: [
     ['#271634', '#703653', '#f09a70', '#fff4e9', '#ffb273'],

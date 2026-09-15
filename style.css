@@ -86,14 +86,14 @@ body[data-theme="morning"] {
   --bg-1: #fff3d8;
   --bg-2: #ffd2bf;
   --bg-3: #9bd7ff;
-  --card: rgba(255, 255, 255, 0.42);
-  --card-border: rgba(92, 57, 68, 0.12);
-  --glass: rgba(255, 255, 255, 0.15);
+  --card: rgba(255, 255, 255, 0.62);
+  --card-border: rgba(74, 48, 48, 0.28);
+  --glass: rgba(255, 255, 255, 0.3);
   --text: #452b35;
   --muted: #5f3d57;
-  --accent: #f07ca7;
-  --accent-2: #ffc7a2;
-  --highlight: #ffe7a4;
+  --accent: #9a3f58;
+  --accent-2: #8f3f52;
+  --highlight: #805700;
   --shadow: rgba(244, 113, 170, 0.16);
 }
 
@@ -101,14 +101,14 @@ body[data-theme="afternoon"] {
   --bg-1: #ffd7a8;
   --bg-2: #ff9bb6;
   --bg-3: #8ad2ff;
-  --card: rgba(255, 255, 255, 0.38);
-  --card-border: rgba(81, 43, 62, 0.12);
-  --glass: rgba(255, 255, 255, 0.15);
+  --card: rgba(255, 255, 255, 0.6);
+  --card-border: rgba(61, 27, 47, 0.28);
+  --glass: rgba(255, 255, 255, 0.28);
   --text: #3d1b2f;
   --muted: #5d3552;
-  --accent: #ff7faa;
-  --accent-2: #ffc9a0;
-  --highlight: #ffe3a0;
+  --accent: #9a3d51;
+  --accent-2: #8a3d4c;
+  --highlight: #765000;
   --shadow: rgba(255, 133, 108, 0.18);
 }
 
@@ -201,7 +201,7 @@ body[data-theme="night"] {
 .heart-shower {
   position: fixed;
   inset: 0;
-  z-index: 2;
+  z-index: 3;
   pointer-events: none;
   overflow: hidden;
 }
@@ -209,7 +209,7 @@ body[data-theme="night"] {
 .love-petal-shower {
   position: fixed;
   inset: 0;
-  z-index: 2;
+  z-index: 3;
   overflow: hidden;
   pointer-events: none;
 }
@@ -218,17 +218,17 @@ body[data-theme="night"] {
   position: absolute;
   top: -2rem;
   left: var(--petal-left);
-  color: color-mix(in srgb, var(--accent-2) 78%, white);
+  color: var(--accent-2);
   font-size: var(--petal-size);
   opacity: 0;
-  text-shadow: 0 0 14px color-mix(in srgb, var(--accent) 75%, transparent);
+  text-shadow: 0 0 10px color-mix(in srgb, var(--accent) 72%, transparent);
   animation: lovePetalFall 4.6s ease-in forwards;
   animation-delay: var(--petal-delay);
 }
 
 @keyframes lovePetalFall {
   0% { opacity: 0; transform: translate3d(0, -12px, 0) rotate(0deg) scale(0.5); }
-  18% { opacity: 0.85; }
+  18% { opacity: 1; }
   100% { opacity: 0; transform: translate3d(var(--petal-drift), 108vh, 0) rotate(180deg) scale(1.1); }
 }
 
@@ -236,16 +236,16 @@ body[data-theme="night"] {
   position: absolute;
   top: -2rem;
   left: var(--heart-left);
-  color: rgba(255, 224, 241, 0.42);
+  color: var(--accent-2);
   font-size: var(--heart-size);
-  text-shadow: 0 0 16px rgba(255, 155, 211, 0.5);
+  text-shadow: 0 0 12px color-mix(in srgb, var(--accent) 72%, transparent);
   animation: entranceHeart 3.2s ease-in forwards;
   animation-delay: var(--heart-delay);
 }
 
 @keyframes entranceHeart {
   0% { opacity: 0; transform: translate3d(0, -10px, 0) rotate(-10deg) scale(0.7); }
-  18% { opacity: 0.75; }
+  18% { opacity: 0.95; }
   100% { opacity: 0; transform: translate3d(22px, 108vh, 0) rotate(24deg) scale(1.2); }
 }
 
