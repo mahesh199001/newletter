@@ -21,8 +21,9 @@ http://localhost:8000
 - `index.html` – page layout
 - `style.css` – styling and animations
 - `script.js` – Gujarati date and daily shayari logic
-- `supabase/schema.sql` – free shared counter and unique-shayari database setup
+- `supabase/schema.sql` – shared counter and 7,200-combination unique-shayari database setup; the browser has 5,120 distinct local shayaris
 - `supabase-config.js` – public Supabase URL and anon-key configuration
+- `photos/` – add the private local gallery images listed in `photos/README.md`
 
 ## Enable worldwide shared shayari
 
@@ -44,6 +45,7 @@ This project intentionally uses separate database names and functions so it does
 - `pooja_shayaris`
 - `get_pooja_current_shayari`
 - `create_pooja_manual_shayari`
-- `record_pooja_page_open`
 
 Run `supabase/schema.sql` in the same Supabase project before opening the site. The existing public URL and publishable key can be reused because the database objects are isolated with the `pooja_` prefix.
+
+After changing the SQL generator, rerun the complete `supabase/schema.sql` file so the shared generator uses the expanded catalog and synchronized reasons and hints.
