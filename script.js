@@ -156,6 +156,33 @@ const themeOptions = {
   ]
 };
 
+const themeContrastTokens = {
+  morning: {
+    accent2: '#8f3f52',
+    highlight: '#805700',
+    border: 'rgba(74, 48, 48, 0.24)',
+    glass: 'rgba(255, 255, 255, 0.48)'
+  },
+  afternoon: {
+    accent2: '#8a3d4c',
+    highlight: '#765000',
+    border: 'rgba(61, 27, 47, 0.24)',
+    glass: 'rgba(255, 255, 255, 0.46)'
+  },
+  evening: {
+    accent2: '#ffe0c7',
+    highlight: '#ffe3a1',
+    border: 'rgba(255, 227, 197, 0.22)',
+    glass: 'rgba(255, 255, 255, 0.08)'
+  },
+  night: {
+    accent2: '#ffd5ef',
+    highlight: '#ffe6a7',
+    border: 'rgba(170, 188, 255, 0.22)',
+    glass: 'rgba(255, 255, 255, 0.06)'
+  }
+};
+
 const constellationNames = ['પૂજા', 'હું'];
 const loveReasonQualities = [
   'તારું સ્મિત', 'તારી ધીરજ', 'તારો અવાજ', 'તારી દયાળુતા', 'તારી સાદગી',
@@ -322,6 +349,7 @@ function applyExperienceTheme(period) {
     themeIndex = Math.floor(Math.random() * options.length);
   }
   const [backgroundOne, backgroundTwo, backgroundThree, text, accent] = options[themeIndex];
+  const contrast = themeContrastTokens[period] || themeContrastTokens.night;
   document.body.dataset.theme = period;
   document.body.style.setProperty('--bg-1', backgroundOne);
   document.body.style.setProperty('--bg-2', backgroundTwo);
@@ -329,6 +357,10 @@ function applyExperienceTheme(period) {
   document.body.style.setProperty('--text', text);
   document.body.style.setProperty('--muted', text);
   document.body.style.setProperty('--accent', accent);
+  document.body.style.setProperty('--accent-2', contrast.accent2);
+  document.body.style.setProperty('--highlight', contrast.highlight);
+  document.body.style.setProperty('--card-border', contrast.border);
+  document.body.style.setProperty('--glass', contrast.glass);
   sessionStorage.setItem('poojaTheme', String(themeIndex));
 }
 
